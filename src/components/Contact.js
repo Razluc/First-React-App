@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Contact extends Component {
   render() {
+    const { name, email, phone } = this.props; //the best way. Insted of this you need to add on each place this.props.name for example.
     return (
       <div>
-        <h4>Vladimir Kliscoci</h4>
+        <h4>{name}</h4>
         <ul>
-            <li>Email: putin@gmail.com</li>
-            <li>Phone: 800-900-1000</li>
+          <li>Email: {email}</li>
+          <li>Phone: {phone}</li>
         </ul>
       </div>
-    )
+    );
   }
 }
 export default Contact;
