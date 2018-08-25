@@ -23,6 +23,17 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card h4 i {
+  cursor: pointer;
+}
+.card h4 i.fa-times {
+  float: right;
+  color: red;
 }

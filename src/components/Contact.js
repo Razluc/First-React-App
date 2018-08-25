@@ -5,6 +5,9 @@ class Contact extends Component {
   state = {
     showContactInfo: false
   };
+  onDeleteClick = () => {
+    this.props.deleteClickHandler();
+  };
 
   render() {
     const { name, email, phone } = this.props.contact; //the best way. Insted of this you need to add on each place this.props.name for example.
@@ -19,6 +22,7 @@ class Contact extends Component {
             }
             className="fas fa-sort-down"
           />
+          <i onClick={this.onDeleteClick} className="fas fa-times" />
         </h4>
         {showContactInfo ? (
           <ul className="list-group">
@@ -37,6 +41,7 @@ Contact.defaultProps = {
   phone: "123-123-123"
 };
 Contact.PropTypes = {
-  contact: PropTypes.object.isRequired
+  contact: PropTypes.object.isRequired,
+  deleteClickHandler: PropTypes.func.isRequired
 };
 export default Contact;
