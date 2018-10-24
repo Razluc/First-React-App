@@ -14,16 +14,16 @@ class AddContact extends Component {
     e.preventDefault();
     const { name, email, phone } = this.state;
     // Check for Errors
-    if(name === '') {
-      this.setState({errors: {name: 'Name is required'}});
+    if (name === '') {
+      this.setState({ errors: { name: 'Name is required' } });
       return;
     }
-    if(email === '') {
-      this.setState({errors: {email: 'Email is required'}});
+    if (email === '') {
+      this.setState({ errors: { email: 'Email is required' } });
       return;
     }
-    if(phone === '') {
-      this.setState({errors: {phone: 'Phone is required'}});
+    if (phone === '') {
+      this.setState({ errors: { phone: 'Phone is required' } });
       return;
     }
 
@@ -45,7 +45,6 @@ class AddContact extends Component {
     });
 
     this.props.history.push('/');
-
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });

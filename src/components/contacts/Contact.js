@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Consumer } from "../../context";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Consumer } from '../../context';
 
 class Contact extends Component {
   state = {
     showContactInfo: false
   };
   onDeleteClick = (id, dispatch) => {
-    dispatch({ type: "DELETE_CONTACT", payload: id });
+    dispatch({ type: 'DELETE_CONTACT', payload: id });
   };
 
   render() {
@@ -20,7 +20,7 @@ class Contact extends Component {
           return (
             <div className="card card-body mb-3">
               <h4>
-                {name}{" "}
+                {name}{' '}
                 <i
                   onClick={() =>
                     this.setState({
@@ -49,9 +49,9 @@ class Contact extends Component {
 }
 
 Contact.defaultProps = {
-  name: "Dumitru",
-  email: "max@imo.no",
-  phone: "123-123-123"
+  name: 'Dumitru',
+  email: 'max@imo.no',
+  phone: '123-123-123'
 };
 Contact.PropTypes = {
   contact: PropTypes.object.isRequired

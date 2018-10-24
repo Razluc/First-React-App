@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Header = props => {
   const { branding } = props;
@@ -14,17 +14,20 @@ const Header = props => {
           <ul className="nav justify-content-center">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                <i className="fas fa-home"/>Home
+                <i className="fas fa-home" />
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/contact/add" className="nav-link">
-                <i className="fas fa-plus"/>Add
+                <i className="fas fa-plus" />
+                Add
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/about" className="nav-link">
-                <i className="fas fa-question"/>About
+                <i className="fas fa-question" />
+                About
               </Link>
             </li>
           </ul>
@@ -35,7 +38,7 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  branding: "The app" //when in app.js the header component don't have any props this value will be show up.
+  branding: 'The app' //when in app.js the header component don't have any props this value will be show up.
 };
 
 Header.PropTypes = {

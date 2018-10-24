@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //Uncontrolled Component . Better with redux. If need props not a simple state.
 class AddContact extends Component {
   constructor(props) {
@@ -17,9 +17,9 @@ class AddContact extends Component {
     console.log(contact);
   };
   static defaultProps = {
-    name: "Name",
-    email: "Email",
-    phone: "Phone"
+    name: 'Name',
+    email: 'Email',
+    phone: 'Phone'
   };
   render() {
     const { name, email, phone } = this.props;

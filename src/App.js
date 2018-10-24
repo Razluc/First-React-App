@@ -15,17 +15,17 @@ class App extends Component {
     return (
       <Provider>
         <Router>
-        <div className="App">
-          <Header branding="Contact Manager" />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Contacts} />
-              <Route exact path="/contact/add" component={AddContact} />
-              <Route exact path="/about" component={About} />
-              <Route component={NotFound} />
-            </Switch>
+          <div className="App">
+            <Header branding="Contact Manager" />
+            <div className="container">
+              <Switch>
+                <Route exact path="/" component={Contacts} />
+                <Route exact path="/contact/add" component={AddContact} />
+                <Route exact path="/about" component={About} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
           </div>
-        </div>
         </Router>
       </Provider>
     );
